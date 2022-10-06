@@ -148,9 +148,8 @@ install_x-ui() {
     #echo -e ""
     #echo -e "如果是更新面板，则按你之前的方式访问面板"
     #echo -e ""
-    systemctl daemon-reload
-    systemctl enable x-ui
-    systemctl start x-ui
+    chkconfig x-ui on
+    service x-ui start
     echo -e "${green}x-ui v${last_version}${plain} 安装完成，面板已启动，"
     echo -e ""
     echo -e "x-ui 管理脚本使用方法: "
